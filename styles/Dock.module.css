@@ -1,0 +1,27 @@
+.dock {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+    transform: translateX(-50%);
+    max-width: 75vw;
+    width: fit-content;
+    overflow: hidden;
+	height: 7vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap; /* only show enough icons to fill available space */
+	border-top: 1px solid #504C51;
+	border-left: 1px solid #504C51;
+	border-right: 1px solid #504C51;
+}
+
+.dock > * {
+	height: 7vh;
+	width: 7vh;
+	cursor: pointer;
+	padding: 5px;
+	box-sizing: border-box;
+}
