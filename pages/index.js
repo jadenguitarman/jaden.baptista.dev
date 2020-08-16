@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Desktop from '../components/Desktop';
-import Dock from '../components/Dock';
 
 const Home = props => {
 	return (
@@ -12,7 +11,6 @@ const Home = props => {
 
 			<main>
 				<Desktop/>
-				<Dock/>
 			</main>
 		</div>
 	);

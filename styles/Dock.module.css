@@ -3,25 +3,43 @@
 	bottom: 0;
 	left: 50%;
     transform: translateX(-50%);
-    max-width: 75vw;
+    max-width: min(100vw, 78vh);
+	/* expand up to full width, but normally show 6 icons on a mobile device (13vh * 6 = 78vh) */
     width: fit-content;
     overflow: hidden;
-	height: 7vh;
-	background-color: rgba(0, 0, 0, 0.7);
-	border-radius: 10px 10px 0 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap; /* only show enough icons to fill available space */
-	border-top: 1px solid #504C51;
-	border-left: 1px solid #504C51;
-	border-right: 1px solid #504C51;
+	height: 13vh;
+	background-color: var(--dock-mobile-background-color);
+	border-radius: 10px 10px 0 0;
 }
 
 .dock > * {
-	height: 7vh;
-	width: 7vh;
-	cursor: pointer;
+	height: 13vh;
+	width: 13vh;
 	padding: 5px;
 	box-sizing: border-box;
+}
+
+.ghost {
+	opacity: 0.3;
+}
+
+@media (min-width: 800px) {
+	.dock {
+		border-top: 1px solid var(--dock-border-color);
+		border-left: 1px solid var(--dock-border-color);
+		border-right: 1px solid var(--dock-border-color);
+		background-color: var(--dock-desktop-background-color);
+		max-width: 75vw;
+		height: 7vh;
+	}
+
+	.dock > * {
+		height: 7vh;
+		width: 7vh;
+		cursor: pointer;
+	}
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from '../styles/AppIcon.module.css';
 
 class AppIcon extends Component {
 	constructor(props) {
@@ -17,7 +18,13 @@ class AppIcon extends Component {
 
 	render() {
 		const Icon = this.state.Icon;
-		return Icon ? <Icon/> : null; // only render something if we have the icon
+		return (
+			<div className={styles.icon} data-app={JSON.stringify(this.props)}>
+				{Icon ? <Icon/> : null /* only render something if we have the icon */ }
+				{!!this.props.label ? <span className="autodidact">{this.props.label}</span> : null}
+				{this.props.open ? <div className={styles.open}></div> : null }
+			</div>
+		);
 	}
 }
 

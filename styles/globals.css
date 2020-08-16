@@ -1,0 +1,49 @@
+/* this file defines site-wide stuff */
+:root {
+	/* define colors by name */
+	--white: #fff;
+	--off-white: #f3f6f9;
+	--slate-gray: #111;
+	--black: #000;
+	--translucent-black: rgba(0, 0, 0, 0.7);
+	--mid-gray: #504C51;
+	--translucent-mid-gray: rgba(90, 84, 92, 0.9);
+	--light-gray: #C8C6C8;
+
+	/* now use the color names to define them by purpose */
+	--dock-desktop-background-color: var(--translucent-black);
+	--dock-mobile-background-color: var(--translucent-mid-gray);
+	--dock-border-color: var(--mid-gray);
+	--dock-open-dot-color: var(--light-gray);
+	--icon-text-color: var(--light-gray);
+}
+
+@font-face {
+	font-family: "Autodidact";
+	src: url("/assets/Autodidact Regular.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url("/assets/Raleway Regular.woff") format("woff");
+	font-display: swap;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-family: Raleway, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+button, .button, input, label, select, textarea,
+nav *,
+.autodidact, .autodidact * {
+	font-family: "Autodidact", sans-serif;
+	letter-spacing: 0.05em;
+}
