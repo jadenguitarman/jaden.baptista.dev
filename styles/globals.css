@@ -20,15 +20,11 @@
 
 @font-face {
 	font-family: "Autodidact";
-	src: url("/cdn/Autodidact Regular.woff") format("woff");
+	src: url("/cdn/Autodidact_Regular.woff") format("woff");
 	font-display: swap;
 }
 
-@font-face {
-	font-family: "Raleway";
-	src: url("/assets/Raleway Regular.woff") format("woff");
-	font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap'); /* Raleway */
 
 * {
 	box-sizing: border-box;
