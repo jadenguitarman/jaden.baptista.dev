@@ -20,7 +20,7 @@
 
 @font-face {
 	font-family: "Autodidact";
-	src: url("/assets/Autodidact Regular.woff") format("woff");
+	src: url("/cdn/Autodidact Regular.woff") format("woff");
 	font-display: swap;
 }
 

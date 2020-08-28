@@ -6,7 +6,6 @@
     max-width: min(100vw, 78vh);
 	/* expand up to full width, but normally show 6 icons on a mobile device (13vh * 6 = 78vh) */
     width: fit-content;
-    overflow: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -25,6 +24,7 @@
 
 .ghost {
 	opacity: 0.3;
+	transform: scale(1.5);
 }
 
 @media (min-width: 800px) {

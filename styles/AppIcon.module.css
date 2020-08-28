@@ -4,6 +4,8 @@
 	align-items: center;
 	justify-content: space-around;
 	position: relative;
+	transform-origin: bottom;
+	transition: transform 0.5s;
 }
 
 .icon > svg {
@@ -31,5 +33,9 @@
 
 	.open {
 		background: var(--dock-open-dot-color);
+	}
+
+	.icon:hover {
+		transform: scale(1.5);
 	}
 }
