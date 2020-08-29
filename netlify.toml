@@ -1,4 +1,0 @@
-[[headers]]
-	for = "/cdn/*"
-		[headers.values]
-		Access-Control-Allow-Origin = "*"
