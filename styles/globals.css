@@ -20,7 +20,7 @@
 
 @font-face {
 	font-family: "Autodidact";
-	src: url("/cdn/Autodidact_Regular.woff") format("woff");
+	src: url("https://cdn.jaden.baptista.dev/Autodidact_Regular.woff") format("woff");
 	font-display: swap;
 }
 
