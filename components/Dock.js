@@ -45,7 +45,7 @@ class Dock extends Component {
 			<div className={styles.dock}>
 				{this.state.apps.map((app, index) =>
 					<AppIcon
-						src={"icons/" + app.src}
+						src={app.src}
 						key={app.src}
 						label={app.label || app.src}
 						open={app.open}
