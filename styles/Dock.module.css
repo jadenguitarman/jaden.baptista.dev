@@ -40,6 +40,9 @@
 	.dock > * {
 		height: 7vh;
 		width: 7vh;
-		cursor: pointer;
+	}
+
+	.dock > *:hover {
+		transform: scale(1.5);
 	}
 }

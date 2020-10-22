@@ -33,8 +33,26 @@ class Desktop extends Component {
 
 				<NoSSR>
 					<div className={styles.icons}>{[
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
+						"Resume",
 						"Resume"
-					].map(icon => <AppIcon src={ "files/" + icon } key={ icon }/>)}</div>
+					].map(icon => <AppIcon src={ icon } key={ icon }/>)}</div>
 
 					<Dock apps={[
 						{

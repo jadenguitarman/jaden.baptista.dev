@@ -25,17 +25,26 @@
 	height: 100%;
 }
 
+.icons {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, 80px);
+    grid-gap: 15px;
+	justify-content: space-evenly;
+}
+
 @media (max-width:800px) {
 	.background {
 		padding-bottom: 13vh;
 	}
+
+	.icons {
+		display: grid;
+	    grid-template-columns: repeat(4, 1fr);
+	    grid-gap: 15px;
+	}
 }
 
-.icons {
-	display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-}
+
 
 .icons > div {
 	padding: 15px;

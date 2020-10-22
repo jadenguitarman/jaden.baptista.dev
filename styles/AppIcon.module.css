@@ -6,6 +6,7 @@
 	position: relative;
 	transform-origin: bottom;
 	transition: transform 0.5s;
+	cursor: pointer;
 }
 
 .icon > svg {
@@ -33,9 +34,5 @@
 
 	.open {
 		background: var(--dock-open-dot-color);
-	}
-
-	.icon:hover {
-		transform: scale(1.5);
 	}
 }

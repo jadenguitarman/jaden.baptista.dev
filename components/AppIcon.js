@@ -12,7 +12,7 @@ class AppIcon extends Component {
 	}
 
 	async getIcon () {
-		const {default: Icon} = await import(`../components/${this.props.src}`);
+		const {default: Icon} = await import(`../components/icons/${this.props.src}`);
 		this.setState({ Icon }); //set state when icon is loaded, which forces a rerender
 	}
 
