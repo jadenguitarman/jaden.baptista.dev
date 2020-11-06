@@ -15,7 +15,7 @@ class Dock extends Component {
 		if (typeof window !== "undefined") {
 			window.addEventListener("load", () => {
 				const dock = document.querySelector("." + styles.dock);
-				new Sortable(dock, {
+				let sortable = new Sortable(dock, {
 					group: 'apps', // set both lists to same group
 					animation: 150,
 					swapThreshold: 0.3,
@@ -28,17 +28,10 @@ class Dock extends Component {
 						);
 					}
 				});
-			});
 
-			if (localStorage.jadenApps) { // if localstorage has a list of apps, use that order instead
-				let lsapps = JSON.parse(localStorage.jadenApps);
-				if (
-					lsapps.map(app => app.src).sort() != this.state.apps.map(app => app.src).sort()
-					&& lsapps.length == this.state.apps.length
-				) {
-					this.state.apps = lsapps; //replace apps in state with apps from localstorage
-				}
-			}
+				// reorganize if in localstorage
+				if (localStorage.jadenApps) sortable.sort(JSON.parse(localStorage.jadenApps).map(x => x.src));
+			});
 		}
 
 		return (
@@ -49,6 +42,7 @@ class Dock extends Component {
 						key={app.src}
 						label={app.label || app.src}
 						open={app.open}
+						openWindow={this.props.openWindow}
 					/>
 				)}
 			</div>

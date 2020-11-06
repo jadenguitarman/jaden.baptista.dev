@@ -3,11 +3,14 @@ import styles from '../styles/Desktop.module.css';
 import Picture from '../components/Picture.js';
 import Dock from '../components/Dock';
 import AppIcon from '../components/AppIcon';
+import Window from '../components/Window';
 import NoSSR from 'react-no-ssr';
 
 class Desktop extends Component {
 	constructor (props) {
 		super(props);
+		this.openWindow = this.openWindow.bind(this);
+		this.closeWindow = this.closeWindow.bind(this);
 		this.updateDimensions();
 	}
 
@@ -22,8 +25,17 @@ class Desktop extends Component {
 		window.addEventListener('resize', this.updateDimensions);
 	}
 
-	componentWillUnmount() {
+	componentWillUnmount () {
 		window.removeEventListener('resize', this.updateDimensions);
+	}
+
+	// these next two functions are passed all the way down to the icons and the windows
+	openWindow (page, section) {
+		this.setState({window: {page, section}});
+	}
+
+	closeWindow (page) {
+		this.setState({window: null});
 	}
 
 	render () {
@@ -33,24 +45,6 @@ class Desktop extends Component {
 
 				<NoSSR>
 					<div className={styles.icons}>{[
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
-						"Resume",
 						"Resume"
 					].map(icon => <AppIcon src={ icon } key={ icon }/>)}</div>
 
@@ -107,8 +101,15 @@ class Desktop extends Component {
 						{
 							src: "Rust"
 						}
-					]}/>
+					]} openWindow={this.openWindow}/>
 				</NoSSR>
+
+				{!!this.state.window
+					? <Window
+						page={this.state.window.page}
+						section={this.state.window.section}
+						closeWindow={this.closeWindow} />
+					: null}
 			</div>
 		);
 	}
