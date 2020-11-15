@@ -6,12 +6,12 @@ class Technologies extends Component {
 		super(props);
 	}
 
-	componentDidUpdate () {
+	componentDidMount () {
 		const container = document.getElementById(styles.container);
 		const selected = container.querySelector("#" + this.props.section);
 		console.log(selected);
 
-		container.parentNode.scrollTop = selected.scrollTop - 10;
+		container.parentNode.scrollTop = selected.offsetTop - 10;
 	}
 
 	render () {
