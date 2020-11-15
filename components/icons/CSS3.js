@@ -1,4 +1,4 @@
-const CSS3 = () => {
+const CSS3 = ({openWindow}) => {
 	return (
 		<svg viewBox="0 0 362.73398 411.37997" onClick={() => {openWindow("Technologies", "css")}}>
 			<path fill="#264de4" d="M0 0h362.734l-33.046 370.199-148.543 41.181-148.134-41.123z"/>

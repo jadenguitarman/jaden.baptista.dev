@@ -1,4 +1,4 @@
-const Rust = () => {
+const Rust = ({openWindow}) => {
 	return (
 		<svg viewBox="0 0 4417 3259" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="1.41421" onClick={() => {openWindow("Technologies", "rust")}}>
 			<g fillRule="nonzero">

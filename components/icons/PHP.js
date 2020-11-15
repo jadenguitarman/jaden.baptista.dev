@@ -1,4 +1,4 @@
-const PHP = () => {
+const PHP = ({openWindow}) => {
 	return (
 		<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 255.92055" onClick={() => {openWindow("Technologies", "php")}}>
 			<g fillRule="evenodd">

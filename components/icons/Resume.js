@@ -1,4 +1,4 @@
-const Resume = () => {
+const Resume = ({openWindow}) => {
 	return (
 		<svg viewBox="0 0 215.89999 279.39999">
 			<defs>

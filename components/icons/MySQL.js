@@ -1,4 +1,4 @@
-const MySQL = () => {
+const MySQL = ({openWindow}) => {
 	return (
 		<svg viewBox="-18.458 6.58 91.279969 91.269035" onClick={() => {openWindow("Technologies", "sql")}}>
 			<path d="M-85.307159-7.6489391H105.84384V124.84106H-85.307159z" fill="none"/>

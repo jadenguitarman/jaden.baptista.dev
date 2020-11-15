@@ -1,4 +1,4 @@
-const NodeJS = () => {
+const NodeJS = ({openWindow}) => {
 	return (
 		<svg viewBox="0 0 96.709761 109.0235" onClick={() => {openWindow("Technologies", "nodejs")}}>
 			<g fill="#689f63">
