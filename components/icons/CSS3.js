@@ -1,6 +1,6 @@
 const CSS3 = () => {
 	return (
-		<svg viewBox="0 0 362.73398 411.37997">
+		<svg viewBox="0 0 362.73398 411.37997" onClick={() => {openWindow("Technologies", "css")}}>
 			<path fill="#264de4" d="M0 0h362.734l-33.046 370.199-148.543 41.181-148.134-41.123z"/>
 			<path fill="#2965f1" d="M301.397 346.626l28.24-316.352h-148.27v349.629z"/>
 			<path fill="#ebebeb" d="M75.677 167.597l4.07 45.41h101.62v-45.41z"/>

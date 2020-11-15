@@ -1,6 +1,6 @@
 const PHP = () => {
 	return (
-		<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 255.92055">
+		<svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 255.92055" onClick={() => {openWindow("Technologies", "php")}}>
 			<g fillRule="evenodd">
 				<circle cy="128" cx="128" fill="#8993be" r="128"/>
 				<path d="M153.425 167.452l14.027-71.013998h32.438c14.028.877 21.042 7.889998 21.042 20.164998 0 21.041-16.658 33.315-31.562 32.438h-15.781l-3.507 18.411zm23.67-31.561l4.384-26.302h11.398c6.137 0 10.52 2.63 10.52 7.89-.876 14.905-7.89 17.535-15.78 18.412h-10.521z"/>
