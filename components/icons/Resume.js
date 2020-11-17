@@ -1,6 +1,12 @@
 const Resume = ({openWindow}) => {
 	return (
-		<svg viewBox="0 0 215.89999 279.39999">
+		<svg viewBox="0 0 215.89999 279.39999" onClick={() => {
+			// download the resume pdf
+			let link = document.createElement('a');
+			link.href = "/assets/Jaden_Baptista_Resume.pdf";
+			link.download = 'Jaden Baptista Resume.pdf';
+			link.dispatchEvent(new MouseEvent('click'));
+		}}>
 			<defs>
 				<clipPath id="aK"><path d="M0 0h612v792H0z" clipRule="evenodd"/></clipPath>
 				<clipPath id="a"><path d="M0 0h612v791.25H0z" clipRule="evenodd"/></clipPath>

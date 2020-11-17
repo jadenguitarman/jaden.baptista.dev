@@ -17,12 +17,14 @@
 
 .icon > svg {
 	height: min(70%, 100% - 5px);
+	width: 100%;
 }
 
 .icon > span {
 	color: var(--icon-text-color);
 	font-size: 2vh;
 	text-shadow: 0px 0px 2px var(--black);
+	text-align: center;
 }
 
 .open {
@@ -34,7 +36,7 @@
 }
 
 @media (min-width: 800px) {
-	.icon > span {
+	.icon:not(.alwaysShowLabel) > span {
 		display: none;
 	}
 

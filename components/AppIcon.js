@@ -19,10 +19,10 @@ class AppIcon extends Component {
 	render() {
 		const Icon = this.state.Icon;
 		return (
-			<div className={styles.icon} data-app={JSON.stringify(this.props)} data-id={this.props.src}>
+			<div className={`${styles.icon} ${this.props.alwaysShowLabel ? styles.alwaysShowLabel : ""}`} data-app={JSON.stringify(this.props)} data-id={this.props.src}>
 				{Icon ? <Icon openWindow={this.props.openWindow}/> : null /* only render something if we have the icon */ }
 				{!!this.props.label ? <span className="autodidact">{this.props.label}</span> : null}
-				{this.props.open ? <div className={styles.open}></div> : null }
+				{this.props.open ? <div className={styles.open}></div> : null}
 			</div>
 		);
 	}

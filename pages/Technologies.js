@@ -7,11 +7,11 @@ class Technologies extends Component {
 	}
 
 	componentDidMount () {
-		const container = document.getElementById(styles.container);
-		const selected = container.querySelector("#" + this.props.section);
-		console.log(selected);
-
-		container.parentNode.scrollTop = selected.offsetTop - 10;
+		if (!!this.props.section) {
+			const container = document.getElementById(styles.container);
+			const selected = container.querySelector("#" + this.props.section);
+			container.parentNode.scrollTop = selected.offsetTop - 10;
+		}
 	}
 
 	render () {
