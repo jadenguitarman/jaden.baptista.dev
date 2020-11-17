@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import styles from '../styles/HistoricYork.module.css';
+import styles from '../styles/HistoricYork.module.css';
 
 class HistoricYork extends Component {
 	constructor (props) {
