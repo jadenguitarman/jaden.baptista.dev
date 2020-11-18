@@ -15,30 +15,6 @@ class Desktop extends Component {
 			windows: []
 		};
 
-		this.desktopApps = [
-			["Resume"],
-			["Technologies"],
-			["Sidus"],
-			["Trash"],
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null
-		].sort(() => .5 - Math.random());
-
 		this.openWindow = this.openWindow.bind(this);
 		this.closeWindow = this.closeWindow.bind(this);
 		this.newNotification = this.newNotification.bind(this);
@@ -108,15 +84,22 @@ class Desktop extends Component {
 				<Picture src="positano" alt="Background of Positano Italy"/>
 
 				<NoSSR>
-					<div className={styles.icons}>{this.desktopApps.map((icon, i) => {
+					<div className={styles.icons}>{[
+						["Resume"],
+						["Technologies"],
+						["Sidus"],
+						["Trash", "Trash", styles.trash],
+						["Finder"]
+					].map(([icon, label, id], i) => {
 						return !!icon
 							? <AppIcon
-								src={ icon[0] }
-								key={ icon[0] }
-								label={ icon[1] ? icon[1] : icon[0] }
+								src={ icon }
+								key={ icon }
+								label={ label ? label : icon }
 								alwaysShowLabel
 								openWindow={this.openWindow}
-								newNotification={this.newNotification} />
+								newNotification={this.newNotification}
+								id={ id } />
 							: <div key={`space-${i}`}></div>;
 					})}</div>
 
@@ -181,7 +164,9 @@ class Desktop extends Component {
 						page={window.page}
 						section={window.section}
 						key={`window-${window.id}`}
-						closeWindow={() => {this.closeWindow(window.id)}} />
+						closeWindow={() => {this.closeWindow(window.id)}}
+						openWindow={this.openWindow}
+						newNotification={this.newNotification} />
 				)}
 
 				<NotificationContainer notifications={this.state.notifications} />

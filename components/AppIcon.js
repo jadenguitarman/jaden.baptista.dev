@@ -26,6 +26,7 @@ class AppIcon extends Component {
 				}`}
 				data-app={JSON.stringify(this.props)}
 				data-id={this.props.src}
+				id={this.props.id}
 			>
 				{Icon
 					? <Icon

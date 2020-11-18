@@ -17,7 +17,11 @@
 
 .icon > svg {
 	height: min(70%, 100% - 5px);
-	width: 100%;
+	max-width: 100%;
+}
+
+.icon.alwaysShowLabel > svg {
+	max-height: calc(100% - 2vh - 10px);
 }
 
 .icon > span {
@@ -25,6 +29,7 @@
 	font-size: 2vh;
 	text-shadow: 0px 0px 2px var(--black);
 	text-align: center;
+	padding-top: 5px;
 }
 
 .open {

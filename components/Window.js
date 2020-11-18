@@ -130,7 +130,12 @@ class Window extends Component {
 				</div>
 
 				<div className={styles.content}>
-					{Content ? <Content section={this.props.section}/> : null /* only render something if we have the content */ }
+					{Content
+						? <Content
+							section={this.props.section}
+							openWindow={this.props.openWindow}
+							newNotification={this.props.newNotification} />
+						: null /* only render something if we have the content */ }
 				</div>
 			</div>
 		);

@@ -39,9 +39,12 @@
 
 .icons {
 	display: grid;
-    grid-template-columns: repeat(auto-fit, 80px);
+    grid-template-rows: repeat(auto-fill, 90px);
+	grid-template-columns: repeat(auto-fill, 90px);
+	height: 100%;
     grid-gap: 15px;
 	justify-content: space-evenly;
+	grid-auto-flow: column;
 }
 
 @media (max-width:800px) {
@@ -64,4 +67,9 @@
 	display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#trash {
+	grid-column-end: -1;
+	grid-row-end: -1;
 }

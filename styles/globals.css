@@ -3,12 +3,20 @@
 	/* define colors by name */
 	--white: #fff;
 	--off-white: #f3f6f9;
-	--slate-gray: #111;
+	--slate-gray: #2b2e30;
+	--slate-gray-2: #292a2c;
+	--slate-gray-3: #2d3033;
 	--black: #000;
 	--translucent-black: rgba(0, 0, 0, 0.7);
 	--mid-gray: #504C51;
+	--mid-gray-2: #777;
 	--translucent-mid-gray: rgba(90, 84, 92, 0.9);
 	--light-gray: #C8C6C8;
+	--light-gray-2: #929394;
+	--lime-green: #429129;
+	--tame-green: #b6d4b0;
+	--red: #f41253;
+	--yellow: #f0db4e;
 
 	/* now use the color names to define them by purpose */
 	--dock-desktop-background-color: var(--translucent-black);

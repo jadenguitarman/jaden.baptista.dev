@@ -1,0 +1,117 @@
+.container {
+	height: 100%;
+}
+
+.header {
+	height: 0;
+	width: 100%;
+}
+
+.content {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	justify-content: space-between;
+	background: var(--slate-gray);
+	border-top: 1px solid black;
+}
+
+.sidebar {
+	max-width: 200px;
+	min-width: 30%;
+	height: 100%;
+	border-right: 1px solid black;
+	background: var(--slate-gray-3);
+}
+
+.sidebar > .sidebarFolder {
+	width: 100%;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	color: var(--off-white);
+	font-size: 14px;
+	transition: background 0.15s;
+}
+
+.sidebar > .sidebarFolder:hover {
+	background: var(--lime-green);
+}
+
+.sidebar > .sidebarFolder > :first-child {
+	height: 20px;
+	opacity: 0.8;
+	pointer-events: none;
+	margin: 0 10px;
+}
+
+.sidebar > .sidebarFolder.activeFolder {
+	background: var(--mid-gray);;
+}
+
+.files {
+	width: min(100% - 200px, 70%);
+	overflow-x: auto;
+	font-size: 14px;
+	height: 100%;
+}
+
+.files > table {
+	border: 0;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.files > table > thead {
+	height: 30px;
+	border-bottom: 1px solid var(--mid-gray-2);
+}
+
+.files > table > thead > tr > th {
+	font-size: 12px;
+	padding: 5px;
+	text-align: left;
+	color: var(--off-white);
+	min-width: 120px;
+}
+
+.files > table > thead > tr > th ~ th {
+	border-left: 1px solid var(--mid-gray-2);
+}
+
+.files > table > tbody {
+	height: calc(100% - 30px);
+}
+
+.files > table > tbody > tr {
+	cursor: pointer;
+	color: var(--light-gray-2);
+	transition: background 0.15s;
+}
+
+.files > table > tbody > tr:hover {
+	background: var(--lime-green);
+	color: var(--tame-green);
+}
+
+.files > table > tbody > tr:nth-child(2n) {
+	background: var(--slate-gray-2);
+}
+
+.files > table > tbody > tr > td {
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 5px;
+	text-overflow: ellipsis;
+}
+
+.files > table > tbody > tr > td:first-child {
+	color: var(--off-white);
+}
+
+.files > table > tbody > tr > td:first-child > :first-child {
+	height: 20px;
+    display: inline-block;
+    width: 20px;
+	pointer-events: none;
+}
