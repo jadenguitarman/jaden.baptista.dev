@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../styles/Sidus.module.css';
+import styles from '../../styles/Sidus.module.css';
 
 class Sidus extends Component {
 	constructor (props) {

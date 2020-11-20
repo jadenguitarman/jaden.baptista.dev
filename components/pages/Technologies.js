@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../styles/Technologies.module.css';
+import styles from '../../styles/Technologies.module.css';
 
 class Technologies extends Component {
 	constructor (props) {

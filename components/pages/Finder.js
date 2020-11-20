@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styles from '../styles/Finder.module.css';
-import AppIcon from '../components/AppIcon';
+import styles from '../../styles/Finder.module.css';
+import AppIcon from '../AppIcon';
 
 class Finder extends Component {
 	constructor (props) {

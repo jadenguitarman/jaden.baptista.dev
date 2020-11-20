@@ -30,7 +30,7 @@ class Window extends Component {
 	}
 
 	async getContent () {
-		const {default: Content} = await import(`../pages/${this.props.page}`);
+		const {default: Content} = await import(`./pages/${this.props.page}`);
 		this.setState({ Content }); //set state when icon is loaded, which forces a rerender
 	}
 
