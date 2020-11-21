@@ -21,10 +21,12 @@ class Window extends Component {
 	}
 
 	componentDidMount () {
-		this.window.current.style.top = (window.innerHeight * 0.2) + "px";
-		this.window.current.style.bottom = (window.innerHeight * 0.2) + "px";
-		this.window.current.style.left = (window.innerWidth * 0.2) + "px";
-		this.window.current.style.right = (window.innerWidth * 0.2) + "px";
+		const pixel_scatter_max = 50;
+		
+		this.window.current.style.top = (window.innerHeight * 0.2 + ((Math.random() * pixel_scatter_max) - (pixel_scatter_max / 2))) + "px";
+		this.window.current.style.bottom = (window.innerHeight * 0.2 + ((Math.random() * pixel_scatter_max) - (pixel_scatter_max / 2))) + "px";
+		this.window.current.style.left = (window.innerWidth * 0.2 + ((Math.random() * pixel_scatter_max) - (pixel_scatter_max / 2))) + "px";
+		this.window.current.style.right = (window.innerWidth * 0.2 + ((Math.random() * pixel_scatter_max) - (pixel_scatter_max / 2))) + "px";
 
 		this.getContent(); //load content asynchronously
 	}

@@ -50,7 +50,7 @@
 }
 
 .files {
-	width: min(100% - 200px, 70%);
+	width: max(100% - 200px, 70%);
 	overflow-x: auto;
 	font-size: 14px;
 	height: 100%;

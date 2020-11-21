@@ -12,12 +12,14 @@ class Desktop extends Component {
 		super(props);
 		this.state = {
 			notifications: [],
-			windows: []
+			windows: [],
+			hasBeenClicked: false
 		};
 
 		this.openWindow = this.openWindow.bind(this);
 		this.closeWindow = this.closeWindow.bind(this);
 		this.newNotification = this.newNotification.bind(this);
+		this.registerClick = this.registerClick.bind(this);
 		this.updateDimensions();
 	}
 
@@ -31,6 +33,11 @@ class Desktop extends Component {
 
 	componentDidMount () {
 		window.addEventListener('resize', this.updateDimensions);
+
+
+		setTimeout(() => {
+			if (!this.state.hasBeenClicked) this.newNotification("Help", "Tips", "This page works like a Mac, so click around!")
+		}, 8000);
 	}
 
 	componentWillUnmount () {
@@ -78,6 +85,10 @@ class Desktop extends Component {
 		});
 	}
 
+	registerClick () {
+		this.state.hasBeenClicked = true;
+	}
+
 	render () {
 		return (
 			<div className={styles.background}>
@@ -89,74 +100,80 @@ class Desktop extends Component {
 						["Technologies"],
 						["Sidus"],
 						["Trash", "Trash", styles.trash],
-						["Finder"]
-					].map(([icon, label, id], i) => {
-						return !!icon
-							? <AppIcon
-								src={ icon }
-								key={ icon }
-								label={ label ? label : icon }
-								alwaysShowLabel
-								openWindow={this.openWindow}
-								newNotification={this.newNotification}
-								id={ id } />
-							: <div key={`space-${i}`}></div>;
-					})}</div>
+						["Finder"],
+						["CompassWave", "Compass Wave"],
+						["EDS", "Energy ...ems"],
+						["Jaden"]
+					].map(([icon, label, id], i) => !!icon
+						? <AppIcon
+							src={ icon }
+							key={ icon }
+							label={ label ? label : icon }
+							alwaysShowLabel
+							openWindow={this.openWindow}
+							newNotification={this.newNotification}
+							id={ id }
+							registerClick={this.registerClick} />
+						: <div key={`space-${i}`}></div>
+					)}</div>
 
-					<Dock apps={[
-						{
-							src: "JavaScript",
-							open: true
-						},
-						{
-							src: "Python"
-						},
-						{
-							src: "HTML5",
-							open: true
-						},
-						{
-							src: "CSS3",
-							open: true
-						},
-						{
-							src: "NodeJS",
-							label: "Node.js",
-							open: true
-						},
-						{
-							src: "PHP"
-						},
-						{
-							src: "Netlify",
-							open: true
-						},
-						{
-							src: "ReactJS",
-							label: "React",
-							open: true
-						},
-						{
-							src: "NextJS",
-							label: "Next.js",
-							open: true
-						},
-						{
-							src: "MySQL"
-						},
-						{
-							src: "PostgreSQL"
-						},
-						{
-							src: "Fauna"
-						},
-						{
-							src: "Laravel"
-						},
-						{
-							src: "Rust"
-						}
-					]} openWindow={this.openWindow}/>
+					<Dock
+						apps={[
+							{
+								src: "JavaScript",
+								open: true
+							},
+							{
+								src: "Python"
+							},
+							{
+								src: "HTML5",
+								open: true
+							},
+							{
+								src: "CSS3",
+								open: true
+							},
+							{
+								src: "NodeJS",
+								label: "Node.js",
+								open: true
+							},
+							{
+								src: "PHP"
+							},
+							{
+								src: "Netlify",
+								open: true
+							},
+							{
+								src: "ReactJS",
+								label: "React",
+								open: true
+							},
+							{
+								src: "NextJS",
+								label: "Next.js",
+								open: true
+							},
+							{
+								src: "MySQL"
+							},
+							{
+								src: "PostgreSQL"
+							},
+							{
+								src: "Fauna"
+							},
+							{
+								src: "Laravel"
+							},
+							{
+								src: "Rust"
+							}
+						]}
+						openWindow={this.openWindow}
+						registerClick={this.registerClick} />
 				</NoSSR>
 
 				{this.state.windows.map(window =>
