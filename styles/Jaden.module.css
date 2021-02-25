@@ -2,3 +2,7 @@
 	width: 100%;
 	padding: 20px;
 }
+
+#container li {
+	margin: 10px 0;
+}

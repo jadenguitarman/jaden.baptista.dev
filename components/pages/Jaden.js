@@ -22,7 +22,7 @@ class Jaden extends Component {
 
 				<ul>
 					<li>
-						<span>Expected in 12/2020</span>
+						<span>12/2020</span>
 						<br/>
 						<span>Harrisburg Area Community College</span>
 						<br/>

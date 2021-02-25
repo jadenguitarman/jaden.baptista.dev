@@ -169,6 +169,15 @@ class Finder extends Component {
 						size: "1.2 KB",
 						kind: "HTML text",
 						onClick: () => {this.props.openWindow("EDS")}
+					},
+					{
+						icon: "Chrome",
+						name: "Historic York",
+						modified: "Today at 9:36 AM",
+						created: "Sept 13, 2020 at 5:49 PM",
+						size: "1.2 KB",
+						kind: "HTML text",
+						onClick: () => {this.props.openWindow("HistoricYork")}
 					}
 				]
 			}

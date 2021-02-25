@@ -103,7 +103,8 @@ class Desktop extends Component {
 						["Finder"],
 						["CompassWave", "Compass Wave"],
 						["EDS", "Energy ...ems"],
-						["Jaden"]
+						["Jaden"],
+						["HistoricYork", "Historic York"]
 					].map(([icon, label, id], i) => !!icon
 						? <AppIcon
 							src={ icon }
