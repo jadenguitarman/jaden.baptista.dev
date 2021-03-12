@@ -90,7 +90,7 @@
 }
 
 .files > table > tbody > tr:hover {
-	background: var(--lime-green);
+	background: var(--lime-green) !important;
 	color: var(--tame-green);
 }
 
